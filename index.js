@@ -5,7 +5,7 @@ export default {
     if (url.pathname !== '/fetch') {
       const html = `<form method="GET" action="/fetch">
         <label>URL: <input name="url" value="https://news.ycombinator.com/" /></label>
-        <label>CSS Selector: <input name="selector" value=".titleline a" /></label>
+        <label>CSS Selector: <input name="selector" value=".titleline > a" /></label>
         <button>Get!</button>
       </form>`;
       return new Response(html, { headers: { 'content-type': 'text/html' } });
